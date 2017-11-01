@@ -153,7 +153,7 @@ int main ()
     bin(((int)100*WS*MYR*seconds)/(WDS*WHS*3600));
 //    bin2(((int)100*WS*MYR*seconds)/(WDS*WHS*3600));
     attron(COLOR_PAIR(1));
-    printw("xout Q%6.2fQ\n", (tm.tm_mday*WS*MYR)/32+(WS*MYR*seconds)/(WDS*WHS*3600));
+    printw("xout Q%6.2fQ\n", ((tm.tm_mday-1)*WS*MYR)/32+(WS*MYR*seconds)/(WDS*WHS*3600));
     attron(COLOR_PAIR(2));
     
     printw ("%2.2f/%2.2f seconds %d since January 1, 2000 in the current timezone\n", 100-100*(WSECS-seconds)/WSECS, 100*(WSECS-seconds)/WSECS, tm.tm_wday);
